@@ -106,26 +106,26 @@ if(isset($_SESSION['error'])) {
 	unset($_SESSION["error"]); //Supprime la SESSION['error']
 }
 
-echo	'<hr /><form method="POST" name="inscription" action="">'.
- 		input("lastname", "votre nom",$user["lastname"]).
- 		input("firstname", "votre prénom",$user["firstname"]).
- 		input("address", "votre adresse",$user["address"]).
- 		input("zipCode", "votre code postal",$user["zipCode"]).
- 		input("city", "votre ville",$user["city"]).
- 		input("country", "votre pays",$user["country"]).
- 		input("phone", "votre numéro de portable",$user["phone"], "tel").
+echo	'<hr /><form method="POST" name="inscription" action="" class="form_inscription">'.
+ 		input("lastname", "Votre nom :",$user["lastname"]).
+ 		input("firstname", "Votre prénom :",$user["firstname"]).
+ 		input("address", "Votre adresse :",$user["address"]).
+ 		input("zipCode", "Votre code postal :",$user["zipCode"]).
+ 		input("city", "Votre ville :",$user["city"]).
+ 		input("country", "Votre pays :",$user["country"]).
+ 		input("phone", "Votre numéro de téléphone :",$user["phone"], "tel").
   		"votre courriel : ".$user["mail"].
   		input("robot", "","", "hidden").
   		input("id_user", "",$user["id_user"], "hidden").
-  		"<button type=\"submit\">Envoyez</button>".
+  		"<button type=\"submit\">Envoyer</button>".
   		'</form><hr />';
 
-echo 	'<form method="POST" name="inscription" action="">'.
-  		input("passwordOld", "votre ancien mot de passe","", "password").
-  		input("password", "votre mot de passe","", "password").
-  		input("passwordVerify", "confirmez votre mot de passe","", "password").
+echo 	'<form method="POST" name="inscription" action="" class="form_inscription">'.
+  		input("passwordOld", "Votre ancien mot de passe :","", "password").
+  		input("password", "Votre mot de passe :","", "password").
+  		input("passwordVerify", "Confirmer votre mot de passe :","", "password").
   		input("robot", "","", "hidden").
-  		"<button type=\"submit\">Envoyez</button>".
+  		"<button type=\"submit\">Envoyer</button>".
   		'</form><hr />';
 
 //tableau des commandes

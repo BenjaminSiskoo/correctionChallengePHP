@@ -6,11 +6,13 @@ body {
   /* FIN HOME
   PAGE BOUTIQUES */
   /*FIN BOUTIQUE
-  	PURCHASE_ORDER */
+    PURCHASE_ORDER */
+  /* FIN  PURCHASE_ORDER
+   PROFIL */
   /* FIN PURCHASE_ORDER
-  	CONFIRMATION DE COMMANDE */
+    CONFIRMATION DE COMMANDE */
   /*FOOTER */ }
-  body .titreduhaut {
+  body h1 {
     text-align: center; }
   body .menu {
     background-color: #2196F3;
@@ -33,7 +35,7 @@ body {
       body .menu .burger:before {
         content: '☰'; }
       body .menu .burger:checked + nav {
-        height: calc(100vh - 50px);
+        height: initial;
         opacity: 0.9; }
       body .menu .burger:checked:before {
         content: 'X'; }
@@ -45,17 +47,17 @@ body {
       overflow: hidden;
       text-transform: uppercase;
       transition: height .2s;
-      width: 100%; }
+      width: 70%; }
       body .menu nav > * {
         display: block;
         letter-spacing: 1px;
         padding: 0 20px;
-        width: 100%;
+        width: 70%;
         font-size: 4vw; }
       body .menu nav ul {
         list-style-type: none; }
         body .menu nav ul li {
-          text-align: center; }
+          text-align: left; }
           body .menu nav ul li a {
             color: #FFFFFF;
             text-decoration: none; }
@@ -83,11 +85,66 @@ body {
     text-align: justify; }
   body #boutiques .bieres .price {
     text-align: right; }
-  body #formPurchase .form label {
-    display: block; }
-  body #formPurchase .form input {
-    width: 100%;
-    border: 1px solid black; }
+  body #formPurchase {
+    padding: 5px;
+    background-color: #AED581; }
+    body #formPurchase table {
+      width: 100%; }
+      body #formPurchase table tr th {
+        font-family: initial; }
+      body #formPurchase table tr td {
+        text-align: center; }
+        body #formPurchase table tr td input {
+          width: 30%;
+          margin-bottom: 5px;
+          padding: 5px;
+          color: #333;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: 0; }
+    body #formPurchase button {
+      width: 40%;
+      margin-top: 2%;
+      margin-left: 30%;
+      margin-bottom: 2%;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #AED581; }
+    body #formPurchase .form label {
+      display: block; }
+    body #formPurchase .form input {
+      width: 90%;
+      margin-left: 1px;
+      margin-bottom: 5px;
+      padding: 5px;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: 0; }
+  body .form_inscription {
+    padding: 15px;
+    background-color: #71bc78;
+    width:50%;
+    margin-right:auto;
+    margin-left:auto;    }
+    body .form_inscription button {
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #b2beb5;
+      width: 50%;
+      margin-top: 2%;
+      margin-left: 30%;
+      margin-bottom: 2%; }
+    body .form_inscription .form-group label {
+      display: block; }
+    body .form_inscription .form-group input {
+      width: 98%;
+      margin-bottom: 5px;
+      padding: 5px;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: 0; }
   body #commandSection table {
     width: 100%; }
     body #commandSection table tr th {
@@ -101,7 +158,7 @@ body {
       list-style: none;
       display: flex;
       justify-content: space-around;
-      margin: 0; }
+       }
       body footer nav ul li a {
         color: #FFFFFF; }
 
@@ -114,7 +171,8 @@ body {
     align-items: center;
     height: initial; }
     body .menu nav > * {
-      font-size: 1.3vw; }
+      font-size: 1.3vw;
+      padding: 0 180px; }
     body .menu nav ul {
       display: flex;
       justify-content: space-around; }
@@ -154,18 +212,42 @@ body {
 
   /* PURCHASE_ORDER */
   #formPurchase {
-    width: 33%;
+    width: 60%;
     margin-top: 5%;
-    margin-left: 33%;
+    margin-left: 20%;
     margin-bottom: 5%; }
     #formPurchase .form_row {
       display: flex;
-      justify-content: space-between; }
+ }
     #formPurchase table {
       width: 100%; }
 
+  /* FIN  PURCHASE_ORDER
+   PROFIL */
+  .form_inscription {
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-bottom: 2%; }
+    .form_inscription .form-group {
+      display: flex;
+      justify-content: space-between; }
+      .form_inscription .form-group label {
+        width: 40%;
+        display: inline-block; }
+      .form_inscription .form-group input {
+        width: 55%;
+        margin-bottom: 5px;
+        padding: 5px;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: 0; }
+    .form_inscription table {
+      width: 100%; }
+
   /* FIN PURCHASE_ORDER
-   FOOTER */
+  FOOTER */
   footer {
     height: 5vh;
     display: flex;

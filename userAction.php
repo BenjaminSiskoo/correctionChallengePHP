@@ -9,9 +9,6 @@ require_once 'includes/function.php';
 // }
 
 
-
-
-
 if(!empty($_POST)){
 	if(	isset($_POST["lastname"]) && !empty($_POST["lastname"]) &&
 		isset($_POST["firstname"]) && !empty($_POST["firstname"]) &&
@@ -93,31 +90,20 @@ if(!empty($_POST)){
 require 'includes/header.php';
 
 echo 	'<h1>Inscription</h1>'.
-		'<form method="POST" name="inscription" action="">'.
- 		input("lastname", "votre nom","").
- 		input("firstname", "votre prénom","").
- 		input("address", "votre adresse","").
- 		input("zipCode", "votre code postal","").
- 		input("city", "votre ville","").
- 		input("country", "votre pays","").
- 		input("phone", "votre numéro de portable","", "tel").
-  		input("mail", "votre courriel","", "email").
-  		input("mailVerify", "vérification de votre courriel","", "email").
-  		input("password", "votre mot de passe","", "password").
-  		input("passwordVerify", "confirmez votre mot de passe","", "password").
+		'<form method="POST" name="inscription" action="" class="form_inscription">'.
+ 		input("lastname", "Votre nom :","").
+ 		input("firstname", "Votre prénom :","").
+ 		input("address", "Votre adresse :","").
+ 		input("zipCode", "Votre code postal :","").
+ 		input("city", "Votre ville :","").
+ 		input("country", "Votre pays ","").
+ 		input("phone", "Votre numéro de téléphone :","", "tel").
+  		input("mail", "Votre e-mail :","", "email").
+  		input("mailVerify", "Vérification de votre e-mail :","", "email").
+  		input("password", "Votre mot de passe","", "password").
+  		input("passwordVerify", "Confirmer votre mot de passe :","", "password").
   		input("robot", "","", "hidden").
   		"<button type=\"submit\">Envoyez</button>".
   		'</form>';
 
-
-
-
-
-
-
-
-
 require 'includes/footer.php';
-
-
-
