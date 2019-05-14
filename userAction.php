@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 require_once 'includes/function.php';
 
 
@@ -10,6 +11,9 @@ require_once 'includes/function.php';
 
 
 if(!empty($_POST)){
+=======
+//inscription
+>>>>>>> 48442a06a12a9b2cc71ff662c3b80293ef045bbf
 	if(	isset($_POST["lastname"]) && !empty($_POST["lastname"]) &&
 		isset($_POST["firstname"]) && !empty($_POST["firstname"]) &&
 		isset($_POST["address"]) && !empty($_POST["address"]) &&
@@ -76,19 +80,29 @@ if(!empty($_POST)){
 				userConnect($_POST["mail"], $_POST["password"]);
 			}
 		}//fin verification mail et password
+	// connexion
+	}else if(isset($_POST["mail"]) && !empty($_POST["mail"]) &&
+		isset($_POST["password"]) && !empty($_POST["password"]) &&
+		isset($_POST["robot"]) && empty($_POST["robot"])//protection robot
+	){
 
-	}else{//fin champ tous définis
-		die('bac a sable');//securisation
+		userConnect($_POST["mail"], $_POST["password"]);
+
+
+
+	}else if(isset($_POST["mail"]) && !empty($_POST["mail"])){
+		//verifier que user exite
+		//die("envoyer mail reset");
+	
+	// si rien
+	}else{
+		die('bac à sable');
 	}
 
-}// fin if post
 
 
 
-
-//debut html
-require 'includes/header.php';
-
+<<<<<<< HEAD
 echo 	'<h1>Inscription</h1>'.
 		'<form method="POST" name="inscription" action="" class="form_inscription">'.
  		input("lastname", "Votre nom :","").
@@ -107,3 +121,17 @@ echo 	'<h1>Inscription</h1>'.
   		'</form>';
 
 require 'includes/footer.php';
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 48442a06a12a9b2cc71ff662c3b80293ef045bbf

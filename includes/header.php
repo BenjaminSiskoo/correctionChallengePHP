@@ -15,6 +15,7 @@ $connect = userOnly(true);
 		<input type="checkbox" class="burger">
 		<nav>
 			<ul>
+<<<<<<< HEAD
 				<li><a href="<?= uri() ?>">Accueil</a></li>
 				<li><a href="<?= uri("userAction.php") ?>">Inscription</a></li>
 				<li><a href="<?= uri("boutique.php") ?>">Boutique</a></li>
@@ -22,8 +23,17 @@ $connect = userOnly(true);
 					<li><a href="<?= uri("purchase_order.php") ?>">Bon de commande</a></li>
 					<li><a href="<?= uri("profil.php") ?>">Profil</a></li>
 					<li><a href="<?= uri("index.php?deconnect") ?>">Déconnexion</a></li>
+=======
+				<li><a href="<?= uri() ?>">Home</a></li>
+				<li><a href="<?= uri("index.php?p=boutique") ?>">Boutique</a></li>
+				<?php if($connect): ?>
+					<li><a href="<?= uri("purchase_order.php") ?>">Bon de commande</a></li>
+					<li><a href="<?= uri("profil.php") ?>">profil</a></li>
+					<li><a href="<?= uri("index.php?p=deconnect") ?>">deconnexion</a></li>
+>>>>>>> 48442a06a12a9b2cc71ff662c3b80293ef045bbf
 				<?php else: ?>
-				<li><a href="<?= uri("login.php") ?>">Connexion</a></li>
+				<li><a href="<?= uri("index.php?p=login") ?>">Connexion</a></li>
+				<li><a href="<?= uri("index.php?p=register") ?>">inscription</a></li>
 				<?php endif; ?> 
 				<li><a href="#">Contact</a></li>
 			</ul>
